@@ -1,0 +1,77 @@
+#center {
+  width: 100%;
+}
+
+.a {
+  width: 100%;
+}
+
+.navBar {
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 60px;
+  margin: 0;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.logoLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.logoViniNavbar {
+  color: rgb(253, 252, 252);
+  font-size: clamp(1.7rem, 2.5vw, 2.4rem);
+  font-weight: 800;
+  margin: 0;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.logoViniImage {
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+
+.listaNavBar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-left: auto;
+  padding: 0;
+  list-style: none;
+}
+
+.listaNavBar li {
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.navLink {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navLink:hover,
+.navLink.active {
+  color: red;
+}
