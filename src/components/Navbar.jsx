@@ -7,7 +7,7 @@ const links = [
   { to: '/', label: 'Sobre' },
   { to: '/quiz', label: 'Quiz' },
   { to: '/roleta', label: 'Roleta' },
-  { to: '/mensagem', label: 'Mensagem' },
+
   { to: '/sorteio', label: 'Sorteio' },
   { to: '/vini', label: 'Vini' },
 ];

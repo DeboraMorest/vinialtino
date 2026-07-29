@@ -16,6 +16,9 @@ import Navbar from './components/Navbar';
 import Sobre from './components/Sobre';
 import Footer from './components/Footer';
 import Quiz from './components/Quiz';
+import Roleta from './components/Roleta';
+import Sorteio from './components/Sorteio';
+import Video from './components/Video';
 
 function HomePage() {
   const [abaAtiva, setAbaAtiva] = useState(null);
@@ -118,16 +121,62 @@ function QuizPage() {
   );
 }
 
+function RoletaPage() {
+  return (
+    <section id="center">
+      <div className="a">
+        <Navbar />
+      </div>
+
+      <div className="pageContent">
+        <Roleta />
+      </div>
+
+      <Footer />
+    </section>
+  );
+}
+
+function SorteioPage() {
+  return (
+    <section id="center">
+      <div className="a">
+        <Navbar />
+      </div>
+
+      <div className="pageContent">
+        <Sorteio />
+      </div>
+
+      <Footer />
+    </section>
+  );
+}
+function ViniPage() {
+  return (
+    <section id="center">
+      <div className="a">
+        <Navbar />
+      </div>
+
+      <div className="pageContent">
+        <Video />
+      </div>
+
+      <Footer />
+    </section>
+  );
+}
 function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/sobre" element={<Navigate to="/" replace />} />
       <Route path="/quiz" element={<QuizPage />} />
-      <Route path="/roleta" element={<PlaceholderPage title="Roleta" />} />
-      <Route path="/mensagem" element={<PlaceholderPage title="Mensagem" />} />
-      <Route path="/sorteio" element={<PlaceholderPage title="Sorteio" />} />
-      <Route path="/vini" element={<PlaceholderPage title="Vini" />} />
+      <Route path="/roleta" element={<RoletaPage />} />
+      <Route path="/sorteio" element={<SorteioPage />} />
+
+      <Route path="/vini" element={<ViniPage title="Vini" />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );

@@ -1,0 +1,21 @@
+.videoPage {
+  width: 100%;
+  min-height: calc(100vh - 160px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.videoLayout {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 40px);
+  max-width: 1600px;
+  justify-content: center;
+  z-index: 1;
+}
+.videoStyle {
+  height: 84vh;
+  z-index: 1;
+}

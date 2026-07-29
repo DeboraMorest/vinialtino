@@ -1,0 +1,326 @@
+.sorteioPage {
+  width: 100%;
+  min-height: calc(100vh - 160px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 0 100px;
+  box-sizing: border-box;
+}
+
+.sorteioLayout {
+  display: grid;
+  grid-template-columns: minmax(360px, 1.2fr) minmax(320px, 0.9fr);
+  gap: clamp(24px, 3vw, 40px);
+  width: calc(100% - 40px);
+  max-width: 1400px;
+  margin: 0 20px;
+  align-items: start;
+}
+
+.sorteioCard {
+  width: 100%;
+  min-height: 520px;
+  max-height: calc(100vh - 180px);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+  padding: clamp(24px, 3vw, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.sorteioBody {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.sorteioBody {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.sorteioCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  pointer-events: none;
+  box-shadow: 0 0 36px rgba(255, 60, 60, 0.18);
+  border: 1px solid rgba(255, 60, 60, 0.45);
+}
+
+.sorteioHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.sorteioLabel {
+  margin: 0 0 6px;
+  color: #ff8a8a;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.sorteioTitle {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.4rem, 2.1vw, 2rem);
+}
+
+.sorteioStatus {
+  margin: 0;
+  color: #f3f4f6;
+  font-size: 0.95rem;
+}
+
+.sorteioFieldLabel {
+  margin: 0 0 1px;
+  color: #f3f4f6;
+  font-size: 0.95rem;
+}
+
+.sorteioInputRow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 14px;
+  align-items: center;
+  min-width: 0;
+}
+
+.sorteioInput {
+  width: 90%;
+  min-width: 0;
+  padding: 16px 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: #f3f4f6;
+  font-size: 1rem;
+  outline: none;
+}
+
+.sorteioAddButton {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.sorteioInput::placeholder {
+  color: rgba(243, 244, 246, 0.55);
+}
+
+.sorteioAddButton,
+.sorteioPrimaryButton,
+.sorteioSecondaryButton,
+.sorteioRemoveButton {
+  border: none;
+  cursor: pointer;
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.sorteioAddButton,
+.sorteioPrimaryButton {
+  background: linear-gradient(135deg, #ff4d4d, #c62828);
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.sorteioAddButton:disabled,
+.sorteioPrimaryButton:disabled,
+.sorteioSecondaryButton:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.sorteioSecondaryButton {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f3f4f6;
+  padding: 14px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.sorteioAddButton:hover:not(:disabled),
+.sorteioPrimaryButton:hover:not(:disabled),
+.sorteioSecondaryButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.sorteioListCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1 1 auto;
+  min-height: 260px;
+  overflow: hidden;
+}
+
+.sorteioListHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.sorteioListTitle {
+  margin: 0;
+  color: #f3f4f6;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.sorteioListBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 77, 77, 0.14);
+  color: #ffb3b3;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.sorteioNameList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  overflow-y: auto;
+  max-height: calc(100% - 48px);
+  min-height: 0;
+}
+
+.sorteioNameList::-webkit-scrollbar {
+  width: 10px;
+}
+
+.sorteioNameList::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 999px;
+}
+
+.sorteioNameList::-webkit-scrollbar-thumb {
+  background: rgba(255, 77, 77, 0.3);
+  border-radius: 999px;
+}
+
+.sorteioNameItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f3f4f6;
+}
+
+.sorteioNameItem.used {
+  background: rgba(36, 36, 36, 0.9);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: rgba(243, 244, 246, 0.7);
+}
+
+.sorteioRemoveButton {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #f3f4f6;
+  font-size: 1.1rem;
+}
+
+.sorteioRemoveButton:hover {
+  background: rgba(255, 77, 77, 0.16);
+}
+
+.sorteioEmptyState {
+  color: rgba(243, 244, 246, 0.7);
+  font-size: 0.95rem;
+  padding: 14px 0;
+}
+
+.sorteioResultBody {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sorteioResultBox {
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sorteioResultText {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  text-align: center;
+  line-height: 1.3;
+}
+
+.sorteioButtons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+@media (max-width: 960px) {
+  .sorteioLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .sorteioButtons {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .sorteioInputRow {
+    grid-template-columns: 1fr;
+  }
+
+  .sorteioAddButton,
+  .sorteioPrimaryButton,
+  .sorteioSecondaryButton {
+    width: 100%;
+  }
+}

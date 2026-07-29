@@ -1,7 +1,7 @@
 export const perguntas = [
   {
     pergunta: 'Quantos seguidores meu canal da Twitch tem?',
-    respostas: ['1. 178', '2. 147', '3. 174'],
+    respostas: [' 178', ' 147', ' 174'],
     correta: 1,
   },
   {

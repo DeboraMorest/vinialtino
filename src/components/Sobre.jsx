@@ -18,9 +18,10 @@ function Sobre() {
       <p className="sobreText">
         Criou um universo onde a Xirívia é amiga da Xixinaua, o Xibiu tromba com
         a Xibata, a Xampola aparece do nada, o bebil sonha em ser Xibiu, a
-        Lambisgóia casa com a Piringuete, a Inzibida perde a vergonha, o P.D.R.
-        muda de cor, o G.N.R. vira meta de vida e não pode faltar a Linguiceta
-        pra churrasco. No final, tudo isso não passa de um bando de bandindinho.
+        Lambisgóia casa com a Piringuete, a Inzibida se apaixona pela Sirigaita,
+        o P.D.R. muda de cor, o G.N.R. vira meta de vida e não pode faltar a
+        Linguiceta pra churrasco. No final, tudo isso não passa de um bando de
+        bandindinho.
       </p>
       <p className="sobreText">
         Se você entendeu tudo isso... parabéns, já faz parte da comunidade. Os

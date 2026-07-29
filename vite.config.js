@@ -13,4 +13,5 @@ export default defineConfig({
       protocol: 'ws',
     },
   },
+  base: '/vinialtino/',
 });
